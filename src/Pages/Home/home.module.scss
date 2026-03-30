@@ -1,0 +1,167 @@
+.home{
+    display: grid;
+    .hero{
+        border: 2px solid black;
+        height: 150vh;
+        background-image: url('../../../public/coffeeHero.webp');
+        background-size: cover;
+        display: grid;
+        grid-template-rows: 80% 20%;
+        padding: 0 20px;
+
+        .intro{
+            align-items: center;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 10px 0;
+            position: relative;
+            top: 20%;
+            color: beige;
+            text-shadow:1px 1px 10px black;
+            font-weight: 600;
+            .introText{
+                min-width: 300px;
+            }
+            h2{
+                font-size: clamp(35px, 4vw, 50px);
+            }
+
+            h3{
+                font-size: clamp(15px, 3vw, 20px);
+            }
+
+            p{
+                max-width: 500px;
+            }
+
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                gap: 20px;
+                max-width: 400px;
+
+
+                .explore{
+                    background-color: #b16743;
+                    color: beige;
+                    font-weight: 600;
+                }
+
+                button{
+                    width: 150px;
+                    border-radius: 20px;
+                    padding: 10px;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .heroInfo{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 5px;
+            .info{
+                box-shadow: 1px 1px 5px black;
+                color: white;
+                text-align: center;
+                height: 200px;
+                align-content: center;
+                background-color: #b16743;
+                border-radius: 20px;
+                h4{
+                    font-size: clamp(17px, 3vw, 30px);
+                }
+                p{
+                    font-size: clamp(13px, 2vw, 20px);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+//DISCOVER AND READ SECTION STYLES
+    .heading{
+        align-items: center;
+        padding: 0 20px;
+
+        display: flex;
+        justify-content: space-between;
+        a{
+            font-size: .8em;
+        }
+    }
+    .list{
+        padding: 15px;
+        list-style: none;
+        flex-wrap: wrap;
+        
+    }
+    .item{
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 350px;
+        height: 400px;
+        display: grid;
+        grid-template-rows: 60% 40%;
+        padding: 10px 5px;
+        img{
+            height: 100%;
+            width: 100%;
+            border: 1px solid #b16743;
+            border-radius: 20px 20px 0 0 
+        }
+        &:hover {
+            box-shadow: 1px 1px 1px black;
+            color: #b16743;
+            cursor: pointer;
+        }
+    }
+    .discover{
+        height: 100vh;
+        background-color: whitesmoke;
+        display: grid;
+        grid-template-rows: 30% 70%;
+    }
+    .blog{
+        height: 100vh;
+        background-color: beige;
+        display: grid;
+        grid-template-rows: 30% 70%;
+
+    }
+
+//READY? STYLES
+    .ready{
+        height: 40vh;
+        align-content: center;
+        text-align: center;
+        margin: auto;
+
+        .readyContainer{
+            border: 1px solid black;
+            width: 70%;
+            margin: auto;
+            button{
+                border-radius: 20px;
+                padding: 10px;
+                background-color: #b16743;
+                color: white;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //FOOTER STYLES
+
+    
+}

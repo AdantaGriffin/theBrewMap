@@ -1,0 +1,25 @@
+.footer{
+    border: 1px solid black;
+    height: 50vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-rows: 80% 20%;
+
+    .top{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid white;
+        align-content: center;
+        text-align: center;
+
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+    .bot{
+        text-align: center;
+    }
+}
