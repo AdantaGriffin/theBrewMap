@@ -1,3 +1,10 @@
+h1, h2, h3, h4, h5, h6{
+    font-family: "Playfair Display";
+}
+p{
+    font-family: "Roboto";
+    font-weight: 400;
+}
 .home{
     display: grid;
     .hero{
@@ -62,9 +69,10 @@
         }
 
         .heroInfo{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: space-between;
             list-style: none;
+            align-items: center;
             padding: 0;
             margin: 0;
             gap: 5px;
@@ -72,16 +80,17 @@
                 box-shadow: 1px 1px 5px black;
                 color: white;
                 text-align: center;
-                height: 200px;
+                width: clamp(200px, 30%, 370px);
+                max-width: 370px;
                 align-content: center;
-                background-color: #b16743;
+                background-color: rgba(177, 103, 67, .7);
                 border-radius: 20px;
                 h4{
                     font-size: clamp(17px, 3vw, 30px);
                 }
                 p{
                     font-size: clamp(13px, 2vw, 20px);
-                    font-weight: 600;
+                    font-weight: 300;
                 }
             }
         }
