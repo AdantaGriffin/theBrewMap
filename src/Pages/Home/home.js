@@ -1,7 +1,17 @@
 import styles from './home.module.scss';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 function Home(){
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        async function getData(){
+            const response = await fetch('/data.json');
+            const result = await response.json();
+            //console.log(result.data)
+            setData(result.data)
+        }
+        getData()
+    }, [])
     return(
         <>
             <section className={styles.home}>
@@ -35,6 +45,7 @@ function Home(){
                 </section>
 
                 <section className={styles.discover}>
+
                     <div className={styles.heading}>
 
                         <div>
@@ -46,10 +57,24 @@ function Home(){
                             <a>view more →</a>
                         </div>
                     </div>
+
                     <div className={styles.discoverListContainer}>
                         <ul className={styles.list}>
-                            <li className={styles.item} style={{backgroundColor:"beige"}}>
-                                <img alt="image" src=""/>
+                            {data?.map(x => (
+                                <li key={x.id} className={styles.item}>
+                                    <img src={x.image} height="100%" width="100%"/>
+                                    <div className={styles.itemInfo}>
+                                        <h4>{x.name}</h4>
+                                        <p>{x.address}</p>
+                                        <p>{x.neighborhood}, {x.city}</p>
+                                        <p>{x.rating}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        {/*<ul className={styles.list}>
+                            <li className={styles.item}>
+                                <img alt="image"/>
                                 <div className={styles.itemInfo}>
                                     <p>name</p>
                                     <p>rating</p>
@@ -57,7 +82,7 @@ function Home(){
                                     <p>notes</p>
                                 </div>
                             </li>
-                        </ul>
+                        </ul>*/}
                     </div>
                 </section>
 
@@ -74,8 +99,21 @@ function Home(){
                         </div>
                     <div className={styles.blogListContainer}>
                         <ul className={styles.list}>
-                            <li className={styles.item} style={{backgroundColor:"whitesmoke"}}>
-                                <img alt="image" src=""/>
+                            {data?.map(x => (
+                                <li key={x.id} className={styles.item}>
+                                    {<img src={x.blogImg} width="100%" height="100%"/>}
+                                    <div className={styles.itemInfo}>
+                                        <h4>{x.name}</h4>
+                                        <p>{x.address}</p>
+                                        <p>{x.neighborhood}, {x.city}</p>
+                                        <p>{x.rating}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                        {/*<ul className={styles.list}>
+                            <li className={styles.item}>
+                                <img alt="image"/>
                                 <div className={styles.itemInfo}>
                                     <p>name</p>
                                     <p>rating</p>
@@ -83,7 +121,7 @@ function Home(){
                                     <p>notes</p>
                                 </div>
                             </li>
-                        </ul>
+                        </ul>*/}
                     </div>
                 </section>
 

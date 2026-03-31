@@ -1,0 +1,41 @@
+{
+    "data":[
+        {
+            "id":1,
+            "image":"./images/TheLark5.png",
+            "blogImg":"./images/TheLark1.png",
+            "name":"The Lark",
+            "rating":"",
+            "address":"1007 Church Avenue",
+            "neighborhood":"Kesington",
+            "city":"Brooklyn",
+            "state":"New York",
+            "details":"Mon-Fri 7AM-6PM, Sat-Sun 8Am-5PM",
+            "entry":"Tucked away in Kensington, Brooklyn, The Lark is a small but cozy coffee shop that comfortably fits around 20 people. In the early morning, it/’s a calm and peaceful spot, ideal for easing into the day, though it starts to fill up around 9 or 10 a.m. as the neighborhood crowd rolls in. There/’s a good balance of indoor seating, along with a few outdoor options for those who prefer fresh air. I ordered the glazed croissant with a chocolate filling. While the icing was a bit too sweet for my taste (I usually drink my coffee black, no sugar), the croissant itself was wonderfully flaky and fresh. The shop also offers free Wi-Fi and multiple outlets, making it a great place to settle in and get some work done. I/’m definitely looking forward to returning to try some of their less sweet pastries. Until next time—enjoy!"
+        },
+        {
+            "id":2,
+            "image":"",
+            "name":"",
+            "rating":"",
+            "address":"",
+            "neighborhood":"",
+            "city":"",
+            "state":"",
+            "details":"",
+            "entry":""
+        },
+        {
+            "id":3,
+            "image":"",
+            "name":"",
+            "rating":"",
+            "address":"",
+            "neighborhood":"",
+            "city":"",
+            "state":"",
+            "details":"",
+            "entry":""
+        }
+    ]
+}

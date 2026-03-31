@@ -5,7 +5,8 @@ import Home from './Pages/Home/home';
 
 const AppRouter = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root/>}>
-    <Route path="" element={<Home/>}/>
+    <Route index element={<Home/>}/>
+    <Route path=":id" element={""}/>
   </Route>
 ))
 
